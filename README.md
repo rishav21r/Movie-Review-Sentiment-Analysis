@@ -26,4 +26,44 @@ By analyzing datasets from IMDb and Rotten Tomatoes, this research focuses on ke
 **Datasets 3, 4, 5: User Review Datasets** (imdbreviews_3idiots2009.csv, imdbreviews_saw2004.csv, imdbreviews_thelionking1994.csv)
 - Contents: These datasets contain user reviews for the movies "3 Idiots", "Saw", and "The Lion King".
 
-*Datasets 3, 4, and 5 consist of user review data from IMDb, collected through web scraping. The specific methodology and code used for this process are documented in this repository.* [Scraping IMDB User Review using R]()
+*Datasets 3, 4, and 5 consist of user review data from IMDb, collected through web scraping. The specific methodology and code used for this process are documented in this repository.* [Scraping IMDB Reviews in R](https://github.com/rishav21r/Scraping-IMDB-Review-in-R)
+
+## Data Cleaning
+Steps for cleaning the IMDb and Rotten Tomatoes datasets, focusing on handling missing values and ensuring correct data types. 
+```python
+    """Specific cleaning steps for each dataset based on known structure."""
+    if 'imdb_top_1000.csv' in file_path:
+        # Fill missing 'Meta_score' with the median of the column
+        data['Meta_score'].fillna(data['Meta_score'].median(), inplace=True)
+        # For 'Certificate', use the most common certificate if not specified
+        data['Certificate'].fillna(data['Certificate'].mode()[0], inplace=True)
+        # Convert 'Gross' to numeric, removing non-numeric characters
+        data['Gross'] = data['Gross'].replace(r'[\$,]', '', regex=True).astype(float)
+        data['Gross'].fillna(data['Gross'].median(), inplace=True)
+        data['IMDB_Rating'] = data['IMDB_Rating'].astype(float)
+
+    elif 'rotten_tomatoes_movies_1.csv' in file_path:
+        # Fill missing values in 'tomatometer_rating' and 'audience_rating'
+        data['tomatometer_rating'].fillna(data['tomatometer_rating'].median(), inplace=True)
+        data['audience_rating'].fillna(data['audience_rating'].median(), inplace=True)
+        # Convert date fields to datetime
+        data['original_release_date'] = pd.to_datetime(data['original_release_date'], errors='coerce')
+        data['streaming_release_date'] = pd.to_datetime(data['streaming_release_date'], errors='coerce')
+```
+
+## Data Integration & Prepration
+IMDb ratings were standardized to a 0-100 scale, matching Rotten Tomatoes. Both databases were integrated via a full outer join, and movie titles were normalized for consistency.
+
+```python
+def normalize_and_prepare_data(self):
+        """Normalize IMDb ratings and prepare data by merging datasets."""
+        self.imdb_data['IMDB_Rating'] = self.imdb_data['IMDB_Rating'] * 10
+        self.imdb_data['platform'] = 'IMDb'
+        self.rotten_tomatoes_data['platform'] = 'Rotten Tomatoes'
+        self.imdb_data.rename(columns={'Series_Title': 'movie_title'}, inplace=True)
+        self.imdb_data['movie_title_lower'] = self.imdb_data['movie_title'].str.lower()
+        self.rotten_tomatoes_data['movie_title_lower'] = self.rotten_tomatoes_data['movie_title'].str.lower()
+        self.combined_data = pd.merge(self.imdb_data, self.rotten_tomatoes_data, on='movie_title_lower', how='outer', suffixes=('_imdb', '_rt'))
+        self.combined_data.rename(columns={'Gross': 'Gross_imdb'}, inplace=True)
+        print("Data normalized and prepared.")
+```
