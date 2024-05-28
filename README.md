@@ -17,12 +17,13 @@ In the dynamic landscape of the film industry, production companies' strategic d
 By analyzing datasets from IMDb and Rotten Tomatoes, this research focuses on key performance indicators (KPIs) that offer both qualitative and quantitative measures of success. These KPIs encompass box office performance, audience and critic ratings, and engagement metrics such as review volume and user interactions.  Through an examination of these KPIs, this study aims to provide a comprehensive understanding of each film's reception and its implications for future productions. 
 
 ## Data Inspection
-Dataset 1: imdb_top_1000.csv
+**Dataset 1: imdb_top_1000.csv**
 - Contents: This dataset contains details about the top 1000 movies on IMDb, including titles, directors, genres, year of release, IMDb ratings, etc.
 
-Dataset 2: rotten_tomatoes_movies_1.csv
+**Dataset 2: rotten_tomatoes_movies_1.csv**
 - Contents: This dataset includes movie titles, Rotten Tomatoes scores, audience scores, critic counts, and more.
 
-Datasets 3, 4, 5: User Review Datasets (imdbreviews_3idiots2009.csv, imdbreviews_saw2004.csv, imdbreviews_thelionking1994.csv)
+**Datasets 3, 4, 5: User Review Datasets** (imdbreviews_3idiots2009.csv, imdbreviews_saw2004.csv, imdbreviews_thelionking1994.csv)
 - Contents: These datasets contain user reviews for the movies "3 Idiots", "Saw", and "The Lion King".
 
+*Datasets 3, 4, and 5 consist of user review data from IMDb, collected through web scraping. The specific methodology and code used for this process are documented in this repository.* [Scraping IMDB User Review using R]()
