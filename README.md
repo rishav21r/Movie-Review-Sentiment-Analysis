@@ -18,11 +18,11 @@ By analyzing datasets from IMDb and Rotten Tomatoes, this research focuses on ke
 
 ## Data Inspection
 Dataset 1: imdb_top_1000.csv
-- Contents: Typically, this dataset contains details about the top 1000 movies on IMDb, including titles, directors, genres, year of release, IMDb ratings, etc.
+- Contents: This dataset contains details about the top 1000 movies on IMDb, including titles, directors, genres, year of release, IMDb ratings, etc.
 
 Dataset 2: rotten_tomatoes_movies_1.csv
-- Contents: This dataset probably includes movie titles, Rotten Tomatoes scores, audience scores, critic counts, and more.
+- Contents: This dataset includes movie titles, Rotten Tomatoes scores, audience scores, critic counts, and more.
 
-Dataset 3, 4, 5: User Review Datasets (imdbreviews_3idiots2009.csv, imdbreviews_saw2004.csv, imdbreviews_thelionking1994.csv)
+Datasets 3, 4, 5: User Review Datasets (imdbreviews_3idiots2009.csv, imdbreviews_saw2004.csv, imdbreviews_thelionking1994.csv)
 - Contents: These datasets contain user reviews for the movies "3 Idiots", "Saw", and "The Lion King".
 
