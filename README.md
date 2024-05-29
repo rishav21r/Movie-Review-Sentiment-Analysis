@@ -31,7 +31,7 @@ By analyzing datasets from IMDb and Rotten Tomatoes, this research focuses on ke
 ## Data Cleaning
 Steps for cleaning the IMDb and Rotten Tomatoes datasets, focusing on handling missing values and ensuring correct data types. 
 ```python
-    """Specific cleaning steps for each dataset based on known structure."""
+    """ Specific cleaning steps for each dataset based on known structure. """
     if 'imdb_top_1000.csv' in file_path:
         # Fill missing 'Meta_score' with the median of the column
         data['Meta_score'].fillna(data['Meta_score'].median(), inplace=True)
@@ -46,7 +46,7 @@ Steps for cleaning the IMDb and Rotten Tomatoes datasets, focusing on handling m
         # Fill missing values in 'tomatometer_rating' and 'audience_rating'
         data['tomatometer_rating'].fillna(data['tomatometer_rating'].median(), inplace=True)
         data['audience_rating'].fillna(data['audience_rating'].median(), inplace=True)
-        # Convert date fields to datetime
+        # Convert date fields to DateTime
         data['original_release_date'] = pd.to_datetime(data['original_release_date'], errors='coerce')
         data['streaming_release_date'] = pd.to_datetime(data['streaming_release_date'], errors='coerce')
 ```
@@ -56,7 +56,7 @@ IMDb ratings were standardized to a 0-100 scale, matching Rotten Tomatoes. Both 
 
 ```python
 def normalize_and_prepare_data(self):
-        """Normalize IMDb ratings and prepare data by merging datasets."""
+        """ Normalize IMDb ratings and prepare data by merging datasets. """
         self.imdb_data['IMDB_Rating'] = self.imdb_data['IMDB_Rating'] * 10
         self.imdb_data['platform'] = 'IMDb'
         self.rotten_tomatoes_data['platform'] = 'Rotten Tomatoes'
@@ -67,3 +67,23 @@ def normalize_and_prepare_data(self):
         self.combined_data.rename(columns={'Gross': 'Gross_imdb'}, inplace=True)
         print("Data normalized and prepared.")
 ```
+
+
+## Data Analysis
+This comprehensive analysis unfolds in several stages:
+- **Descriptive and Distributional Analysis:** To track rating trends across IMDb and Rotten Tomatoes to reveal how audiences and critics perceive films.
+- **Comparative Analysis:** Employing statistical tests, the aim is to highlight significant differences between audience and critic ratings, offering insights into potential biases or preferences.
+- **Sentiment Analysis:** By linking user review sentiments to movie ratings, uncover how emotional responses impact overall evaluations.
+- **Revenue Analysis:** To explore the correlation between ratings and box office success to understand the financial implications of critical and popular acclaim.
+- **Content Rating Profitability:** This examines revenue data to guide genre choices and inform future production strategies.
+
+
+
+## Key Findings
+
+### Descriptive and Distributional Analysis:
+#### Histogram of Ratings 
+*_The histogram plots aim to explore the distribution of four metrics: IMDb Audience Rating, IMDb Professional Rating, RT Audience Rating and RT Professional Rating._*
+- The IMDb audience rating distribution is right-skewed, with most scores concentrated above 70, while the Rotten Tomatoes audience rating distribution more closely resembles a normal distribution with a wider range. This suggests that IMDb users tend to rate films more generously than Rotten Tomatoes users.
+
+- The IMDb professional rating distribution is approximately normal, peaking around 80, while the Rotten Tomatoes professional rating distribution is left-skewed, peaking at 100 with a wider spread. This indicates that IMDb professionals are more likely to give moderate ratings, while Rotten Tomatoes professionals tend to give more extreme ratings, both high and low.
