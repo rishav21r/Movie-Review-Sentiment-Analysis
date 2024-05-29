@@ -86,4 +86,6 @@ This comprehensive analysis unfolds in several stages:
 *_The histogram plots aim to explore the distribution of four metrics: IMDb Audience Rating, IMDb Professional Rating, RT Audience Rating and RT Professional Rating._*
 - The IMDb audience rating distribution is right-skewed, with most scores concentrated above 70, while the Rotten Tomatoes audience rating distribution more closely resembles a normal distribution with a wider range. This suggests that IMDb users tend to rate films more generously than Rotten Tomatoes users.
 
-- The IMDb professional rating distribution is approximately normal, peaking around 80, while the Rotten Tomatoes professional rating distribution is left-skewed, peaking at 100 with a wider spread. This indicates that IMDb professionals are more likely to give moderate ratings, while Rotten Tomatoes professionals tend to give more extreme ratings, both high and low.
+- The IMDb professional rating distribution is approximately normal, peaking at around 80, while the Rotten Tomatoes professional rating distribution is left-skewed, peaking at 100 with a wider spread. This indicates that IMDb professionals are more likely to give moderate ratings, while Rotten Tomatoes professionals tend to give more extreme ratings, both high and low.
+
+  ![alt text](image.jpg)
