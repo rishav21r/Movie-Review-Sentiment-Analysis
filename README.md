@@ -100,7 +100,7 @@ CDFs offer a clear visual representation of the proportion of ratings that fall 
 [logo2]: plots/cdf.png "Cumulative Distribution Functions"
 
 #### Rating Distribution
-Violin plots offer a more detailed understanding of the distribution of film ratings across different platforms.  IMDb Meta_scores tend to cluster more tightly, with fewer low ratings compared to Tomatometer Ratings, which span a broader range and show a more even distribution across the rating scale. Audience Ratings on Rotten Tomatoes are slightly skewed towards higher scores but still demonstrate considerable variation, particularly in the mid-range.
+Violin plots offer a more detailed understanding of the distribution of film ratings across different platforms.  IMDb Meta scores tend to cluster more tightly, with fewer low ratings compared to Tomatometer Ratings, which span a broader range and show a more even distribution across the rating scale. Audience Ratings on Rotten Tomatoes are slightly skewed towards higher scores but still demonstrate considerable variation, particularly in the mid-range.
 
 ![alt text][logo3]
 
@@ -113,6 +113,18 @@ IMDb ratings have demonstrated a consistent standard over time, with a slight up
 
 [logo4]: plots/yearlytrends.png "Yearly trends for all Ratings"
 
-### Comparative Analysis:
+### Comparative Analysis
 
+#### Average Rating Comparison
+IMDb audience ratings and Rotten Tomatoes audience scores show a close alignment, indicating a general consistency in public opinion across both platforms. While Meta scores and RT Tomatometer ratings also exhibit similarity, a slight divergence suggests some variability in critical assessments between the two platforms.
 
+![alt text][logo5]
+
+[logo5]: plots/ratingcomparison.png "Average Rating Comparison"
+
+#### Mean Critic Scores with Error Bars
+While the average Meta score slightly surpasses the average RT Tomatometer rating, the overlapping error bars imply that this difference may not hold significant practical implications. The observed standard deviations in critic scores underscore the inherent variability in individual movie ratings, highlighting that despite a consensus, opinions on specific films can diverge considerably.
+
+![alt text][logo6]
+
+[logo6]: plots/errorbars.png "Mean Critic Scores with Error Bars"
