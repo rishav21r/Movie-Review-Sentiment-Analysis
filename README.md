@@ -163,9 +163,11 @@ An initial sentiment analysis was performed on three films: "The Lion King (1994
 
 The majority of reviews expressed a positive sentiment, with sentiment scores predominantly concentrated around positive values.
 
+
 ![alt text][logo9]
 
 [logo9]: plots/sentimentscorelk.png "Distribution of Sentiment Score for The Lion King (1994)"
+
 
 **3.Correlation between Sentiment Scores and Ratings:**
 - Average Sentiment Score: 0.29
@@ -211,24 +213,59 @@ In contrast to the overwhelmingly positive sentiment for "The Lion King (1994)",
 - Negative: 4.71%
 - Neutral: 1.18%
 
-![alt text][logo11]
+![alt text][logo14]
 
-[logo11]: plots/sentiment3i.png "Distribution of Sentiment for 3 Idiots (2009)"
+[logo14]: plots/sentiment3i.png "Distribution of Sentiment for 3 Idiots (2009)"
 
 **2. Sentiment Score Distribution:**
 
 Much like "The Lion King (1994)", the majority of reviews for "3 Idiots (2009)" are positive, with very few falling into the neutral or negative categories.
 
-![alt text][logo12]
+![alt text][logo15]
 
-[logo12]: plots/sentimentscore3i.png "Distribution of Sentiment Score for 3 Idiots (2009)"
+[logo15]: plots/sentimentscore3i.png "Distribution of Sentiment Score for 3 Idiots (2009)"
 
 **3.Correlation between Sentiment Scores and Ratings:**
 - Average Sentiment Score: 0.08
 - Average Rating: 7.67
 
-![alt text][logo13]
+![alt text][logo16]
 
-[logo13]: plots/sentimentvsrating3i.png "Correlation between Sentiment Scores and Ratings for 3 Idiots (2009)"
+[logo16]: plots/sentimentvsrating3i.png "Correlation between Sentiment Scores and Ratings for 3 Idiots (2009)"
 
 Like "The Lion King (1994)", audiences overwhelmingly loved "3 Idiots (2009)".  Its high average rating and positive sentiment score are a testament to its popularity.
+
+### Revenue Analysis
+#### Correlation Analysis:
+The scatter plots with regression lines for IMDb Rating vs. Gross Revenue and Meta Score vs. Gross Revenue show the distribution and trend of the data points. The visual inspection suggests a weak relationship between the ratings and gross revenue.
+
+![alt text][logo17]
+
+[logo17]: plots/revenue.png "Rating vs Gross Revenue for IMDB"
+
+#### Regression Analysis:
+
+| Feature       | Coefficient   | Intercept       | R-Squared  |
+| :-------------|:--------------| :---------------| :----------|
+| IMDB Rating   | 5448623.83    | -352611928.67   | 0.0177     |
+| Meta Score    | -429086.03    | 112971161.85    | 0.0019     |
+
+    
+- For IMDb ratings, each one-point increase is associated with a rise of roughly $5.45 million in gross revenue. However, the R-squared value of 1.77% suggests this relationship is weak and that IMDb ratings alone explain a very small portion of the variance in a movie's financial success.
+- Interestingly, Meta scores show an inverse relationship, with each one-point increase linked to a decrease of about $430,000 in gross revenue. Yet again, the R-squared value of 0.2% indicates this is a very weak connection, and Metacritic scores alone are not a strong predictor of a movie's box office performance.
+
+#### Residual Plots:
+The residual plots for both IMDb Rating and Meta Score illustrate the distribution of differences between the actual gross revenue and the revenue predicted by our linear models. The non-random patterns in these plots suggest that these models, which assume a straightforward linear relationship, may not fully capture the complex nuances of how ratings and gross revenue interact.
+
+![alt text][logo18]
+
+[logo18]: plots/residual.png "Residual Plots for IMDB"
+
+The analysis reveals that movie ratings, whether from IMDb or Metacritic (Meta score), have only a slight influence on a movie's gross revenue. The low R-squared values demonstrate that factors beyond ratings play a much larger role in a film's box office success. To gain a deeper understanding of these factors, further analysis could explore the impact of marketing budgets, distribution strategies, and genre on a movie's financial performance.
+
+### Content Rating Profitability
+The highest-grossing films, averaging $143.3 million, fall within the "86 to 90" rating category, indicating that movies with IMDb scores in this range tend to be the most commercially successful. The "Above 90" category follows closely behind, averaging a still impressive $81.7 million, but suggesting that exceptionally high ratings don't always guarantee the highest earnings.  Films rated "76 to 80" demonstrate moderate commercial success, averaging $60.5 million, while the "81 to 85" category trails with an average gross of $56.4 million, the lowest among the analyzed categories.
+
+![alt text][logo19]
+
+[logo19]: plots/grossrevenue.png "Average Gross Revenue by IMDb Rating Category"
