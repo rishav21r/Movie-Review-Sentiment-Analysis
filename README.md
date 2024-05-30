@@ -204,3 +204,31 @@ Although positive sentiment prevails, a notable proportion of reviews express ne
 [logo13]: plots/sentimentvsratingsaw.png "Correlation between Sentiment Scores and Ratings for Saw (2004)"
 
 In contrast to the overwhelmingly positive sentiment for "The Lion King (1994)", "Saw (2004)" elicits a more divided response. The lower average sentiment score and the significant presence of negative sentiment suggest a polarized audience reaction to "Saw (2004)".
+
+**3 Idiots (2009)**
+**1. Sentiment Distribution:**
+- Positive: 94.12%
+- Negative: 4.71%
+- Neutral: 1.18%
+
+![alt text][logo11]
+
+[logo11]: plots/sentiment3i.png "Distribution of Sentiment for 3 Idiots (2009)"
+
+**2. Sentiment Score Distribution:**
+
+Much like "The Lion King (1994)", the majority of reviews for "3 Idiots (2009)" are positive, with very few falling into the neutral or negative categories.
+
+![alt text][logo12]
+
+[logo12]: plots/sentimentscore3i.png "Distribution of Sentiment Score for 3 Idiots (2009)"
+
+**3.Correlation between Sentiment Scores and Ratings:**
+- Average Sentiment Score: 0.08
+- Average Rating: 7.67
+
+![alt text][logo13]
+
+[logo13]: plots/sentimentvsrating3i.png "Correlation between Sentiment Scores and Ratings for 3 Idiots (2009)"
+
+Like "The Lion King (1994)", audiences overwhelmingly loved "3 Idiots (2009)".  Its high average rating and positive sentiment score are a testament to its popularity.
