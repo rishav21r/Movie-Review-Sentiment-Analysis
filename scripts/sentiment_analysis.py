@@ -13,12 +13,27 @@ def analyze_sentiment_textblob(reviews):
 
 # Function to visualize sentiment analysis
 def visualize_sentiment_analysis(results, title):
-    # Sentiment Distribution
+    # Sentiment Distribution (with custom colors)
     plt.figure(figsize=(10, 5))
-    sns.countplot(x='Sentiment_Type', data=results, order=['positive', 'neutral', 'negative'])
+
+    # Define a dictionary to map sentiment types to colors
+    sentiment_colors = {'positive': 'palegreen', 'neutral': 'gold', 'negative': 'tomato'}
+
+    # Use the palette argument to set colors based on sentiment_colors
+    sns.countplot(x='Sentiment_Type', data=results, order=sentiment_colors.keys(),
+                  palette=sentiment_colors)
+
     plt.title(f'Distribution of Sentiments for {title}')
     plt.xlabel('Sentiment Type')
     plt.ylabel('Count')
+
+    # Add labels to each bar (count and percentage)
+    for p in plt.gca().patches:
+        height = p.get_height()
+        percentage = f'{height / len(results) * 100:.1f}%'
+        plt.gca().text(p.get_x() + p.get_width() / 2., height + 2, f'{height}\n({percentage})', ha="center",
+                       va="bottom")
+
     plt.show()
 
     # Print sentiment type counts
