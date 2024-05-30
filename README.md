@@ -123,8 +123,56 @@ IMDb audience ratings and Rotten Tomatoes audience scores show a close alignment
 [logo5]: plots/ratingcomparison.png "Average Rating Comparison"
 
 #### Mean Critic Scores with Error Bars
-While the average Meta score slightly surpasses the average RT Tomatometer rating, the overlapping error bars imply that this difference may not hold significant practical implications. The observed standard deviations in critic scores underscore the inherent variability in individual movie ratings, highlighting that despite a consensus, opinions on specific films can diverge considerably.
+While the average Meta_score marginally surpasses the average Tomatometer rating, the overlapping error bars suggest this difference might not be statistically significant. This implies that, while a slight trend exists, the two scores are practically interchangeable for most purposes. The notable standard deviations further emphasize the inherent variability in critical opinions, underscoring that individual film ratings can diverge significantly despite the overall agreement in average scores.
 
 ![alt text][logo6]
 
 [logo6]: plots/errorbars.png "Mean Critic Scores with Error Bars"
+
+#### Correlation between Ratings
+**T-test Results:**
+- T-statistic: -10.49
+- P-value: 6.88e-25
+
+  The t-test results show a significant difference between the mean Meta_score and Tomatometer ratings, indicating that critics' scores on IMDb and Rotten Tomatoes differ statistically.
+  
+**Correlation Results:**
+- Correlation between IMDb Ratings and RT Audience Ratings: 0.213
+- Correlation between IMDb Meta Scores and RT Tomatometer Ratings: 0.465
+
+  The correlations suggest a moderate positive relationship between Meta_scores and Tomatometer ratings and a weaker positive relationship between IMDb ratings and RT audience ratings.
+
+![alt text][logo7]
+
+[logo7]: plots/correlations.png "Correlation between Ratings"
+
+### Sentiment Analysis
+An initial sentiment analysis was performed on three films: "The Lion King (1994)", "Saw (2004)", and "3 Idiots (2009)". This analysis encompassed examining the distribution of sentiment categories, the distribution of sentiment scores, and the correlation between sentiment scores and ratings. Detailed findings for each film are presented below. (For specific details on how these movies were selected, please refer to the following repository: [Scraping IMDB Reviews in R](https://github.com/rishav21r/Scraping-IMDB-Review-in-R)).
+
+**The Lion King (1994)**
+**1. Sentiment Distribution:**
+- Positive: 96.05%
+- Negative: 3.95%
+- Neutral: 0.00%
+
+![alt text][logo8]
+
+[logo8]: plots/sentimentlk.png "Distribution of Sentiment for The Lion King (1994)"
+
+**2. Sentiment Score Distribution:**
+
+The majority of reviews expressed a positive sentiment, with sentiment scores predominantly concentrated around positive values.
+
+![alt text][logo9]
+
+[logo9]: plots/sentimentscorelk.png "Distribution of Sentiment Score for The Lion King (1994)"
+
+**3.Correlation between Sentiment Scores and Ratings:**
+- Average Sentiment Score: 0.29
+- Average Rating: 8.55
+
+![alt text][logo10]
+
+[logo10]: plots/sentimentvsratinglk.png "Correlation between Sentiment Scores and Ratings for The Lion King (1994)"
+
+Sentiment analysis reveals overwhelmingly positive feedback for "The Lion King (1994)", with a strong correlation between positive sentiment and high ratings, affirming the audience's positive reception of this highly-rated film.
