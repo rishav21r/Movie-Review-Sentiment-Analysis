@@ -81,7 +81,7 @@ This comprehensive analysis unfolds in several stages:
 
 ## Key Findings
 
-### Descriptive and Distributional Analysis:
+### Descriptive and Distributional Analysis
 #### Histogram 
 *_The histogram plots aim to explore the distribution of four metrics: IMDb Audience Rating (IMDB rating), IMDb Professional Rating (Meta score), RT Audience Rating and RT Professional Rating (Tomatometer rating)._*
 - The IMDb audience rating distribution is right-skewed, with most scores concentrated above 70, while the Rotten Tomatoes audience rating distribution more closely resembles a normal distribution with a wider range. This suggests that IMDb users tend to rate films more generously than Rotten Tomatoes users.
@@ -108,3 +108,11 @@ Violin plots offer a more detailed understanding of the distribution of film rat
 
 #### Yearly Trends
 IMDb ratings have demonstrated a consistent standard over time, with a slight upward trend in recent years, suggesting enduring audience preferences on the platform. In contrast, Meta_scores and Tomatometer ratings have fluctuated notably, reflecting the evolving nature of critical reception, potentially influenced by shifts in film quality, genre trends, or critical standards. Despite these variations, all rating types generally average high, indicating an overall positive sentiment from both critics and audiences. However, a minor decline in audience ratings recently hints at evolving viewer expectations or a potential shift in preferences towards newer films.
+
+![alt text][logo4]
+
+[logo4]: plots/yearlytrends.png "Yearly trends for all Ratings"
+
+### Comparative Analysis:
+
+
