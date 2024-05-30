@@ -83,7 +83,7 @@ This comprehensive analysis unfolds in several stages:
 
 ### Descriptive and Distributional Analysis:
 #### Histogram 
-*_The histogram plots aim to explore the distribution of four metrics: IMDb Audience Rating, IMDb Professional Rating, RT Audience Rating and RT Professional Rating._*
+*_The histogram plots aim to explore the distribution of four metrics: IMDb Audience Rating (IMDB rating), IMDb Professional Rating (Meta score), RT Audience Rating and RT Professional Rating (Tomatometer rating)._*
 - The IMDb audience rating distribution is right-skewed, with most scores concentrated above 70, while the Rotten Tomatoes audience rating distribution more closely resembles a normal distribution with a wider range. This suggests that IMDb users tend to rate films more generously than Rotten Tomatoes users.
 
 - The IMDb professional rating distribution is approximately normal, peaking at around 80, while the Rotten Tomatoes professional rating distribution is left-skewed, peaking at 100 with a wider spread. This indicates that IMDb professionals are more likely to give moderate ratings, while Rotten Tomatoes professionals tend to give more extreme ratings, both high and low.
@@ -99,9 +99,12 @@ CDFs offer a clear visual representation of the proportion of ratings that fall 
 
 [logo2]: plots/cdf.png "Cumulative Distribution Functions"
 
-#### Violin Plot
-Violin plots offer a more detailed understanding of the distribution of film ratings across different platforms.  IMDb Meta_scores tend to cluster more tightly, with fewer low ratings compared to Tomatometer Ratings, which span a broader range and show a more even distribution across the rating scale. Audience Ratings on Rotten Tomatoes are slightly skewed towards higher scores, but still demonstrate considerable variation, particularly in the mid-range.
+#### Rating Distribution
+Violin plots offer a more detailed understanding of the distribution of film ratings across different platforms.  IMDb Meta_scores tend to cluster more tightly, with fewer low ratings compared to Tomatometer Ratings, which span a broader range and show a more even distribution across the rating scale. Audience Ratings on Rotten Tomatoes are slightly skewed towards higher scores but still demonstrate considerable variation, particularly in the mid-range.
 
 ![alt text][logo3]
 
 [logo3]: plots/violinplot.png "Violin Plot for all Ratings"
+
+#### Yearly Trends
+IMDb ratings have demonstrated a consistent standard over time, with a slight upward trend in recent years, suggesting enduring audience preferences on the platform. In contrast, Meta_scores and Tomatometer ratings have fluctuated notably, reflecting the evolving nature of critical reception, potentially influenced by shifts in film quality, genre trends, or critical standards. Despite these variations, all rating types generally average high, indicating an overall positive sentiment from both critics and audiences. However, a minor decline in audience ratings recently hints at evolving viewer expectations or a potential shift in preferences towards newer films.
