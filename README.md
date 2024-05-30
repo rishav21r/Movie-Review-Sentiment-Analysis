@@ -176,3 +176,31 @@ The majority of reviews expressed a positive sentiment, with sentiment scores pr
 [logo10]: plots/sentimentvsratinglk.png "Correlation between Sentiment Scores and Ratings for The Lion King (1994)"
 
 Sentiment analysis reveals overwhelmingly positive feedback for "The Lion King (1994)", with a strong correlation between positive sentiment and high ratings, affirming the audience's positive reception of this highly-rated film.
+
+**Saw (2004)**
+**1. Sentiment Distribution:**
+- Positive: 75.88%
+- Negative: 24.12%
+- Neutral: 0.00%
+
+![alt text][logo11]
+
+[logo11]: plots/sentimentsaw.png "Distribution of Sentiment for Saw (2004)"
+
+**2. Sentiment Score Distribution:**
+
+Although positive sentiment prevails, a notable proportion of reviews express negative sentiment.
+
+![alt text][logo12]
+
+[logo12]: plots/sentimentscoresaw.png "Distribution of Sentiment Score for Saw (2004)"
+
+**3.Correlation between Sentiment Scores and Ratings:**
+- Average Sentiment Score: 0.08
+- Average Rating: 7.67
+
+![alt text][logo13]
+
+[logo13]: plots/sentimentvsratingsaw.png "Correlation between Sentiment Scores and Ratings for Saw (2004)"
+
+In contrast to the overwhelmingly positive sentiment for "The Lion King (1994)", "Saw (2004)" elicits a more divided response. The lower average sentiment score and the significant presence of negative sentiment suggest a polarized audience reaction to "Saw (2004)".
