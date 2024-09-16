@@ -150,6 +150,7 @@ While the average Meta_score marginally surpasses the average Tomatometer rating
 An initial sentiment analysis was performed on three films: "The Lion King (1994)", "Saw (2004)", and "3 Idiots (2009)". This analysis encompassed examining the distribution of sentiment categories, the distribution of sentiment scores, and the correlation between sentiment scores and ratings. Detailed findings for each film are presented below. (For specific details on how these movies were selected, please refer to the following repository: [Scraping IMDB Reviews in R](https://github.com/rishav21r/Scraping-IMDB-Review-in-R)).
 
 **The Lion King (1994)**
+
 **1. Sentiment Distribution:**
 - Positive: 96.05%
 - Negative: 3.95%
