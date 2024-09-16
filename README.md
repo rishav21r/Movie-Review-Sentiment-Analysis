@@ -181,6 +181,7 @@ The majority of reviews expressed a positive sentiment, with sentiment scores pr
 Sentiment analysis reveals overwhelmingly positive feedback for "The Lion King (1994)", with a strong correlation between positive sentiment and high ratings, affirming the audience's positive reception of this highly-rated film.
 
 **Saw (2004)**
+
 **1. Sentiment Distribution:**
 - Positive: 75.88%
 - Negative: 24.12%
@@ -209,6 +210,7 @@ Although positive sentiment prevails, a notable proportion of reviews express ne
 In contrast to the overwhelmingly positive sentiment for "The Lion King (1994)", "Saw (2004)" elicits a more divided response. The lower average sentiment score and the significant presence of negative sentiment suggest a polarized audience reaction to "Saw (2004)".
 
 **3 Idiots (2009)**
+
 **1. Sentiment Distribution:**
 - Positive: 94.12%
 - Negative: 4.71%
